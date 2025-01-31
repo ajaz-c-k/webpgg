@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fcefdc;
+  color: #444;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff6f61, #ff9800);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo img {
+  height: 55px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffe082;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Hero Section */
+.hero {
+  background: url('OIP.svg') no-repeat center center/cover;
+  padding: 120px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 65px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+  background: #ffca28;
+  padding: 14px 28px;
+  border-radius: 50px;
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+  background: #ff9800;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Sections */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.menu-item {
+  background: linear-gradient(135deg, #ffca28, #ff9800);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item h3 {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-item p {
+  color: #fff3e0;
+  font-size: 16px;
+}
+
+/* Reservation Form */
+.reservation {
+  background: #fff;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.reservation h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff9800;
+}
+
+.reservation form {
+  display: grid;
+  gap: 15px;
+}
+
+.reservation input,
+.reservation select {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.reservation button {
+  padding: 14px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.reservation button:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-item {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item {
+    padding: 10px;
+  }
+
+  .reservation {
+    padding: 20px;
+  }
+}
